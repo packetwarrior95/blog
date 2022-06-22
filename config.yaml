@@ -1,4 +1,4 @@
-baseurl: "packet-warrior.net"
+baseurl: "https://packetwarrior95.github.io/blog/"
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
