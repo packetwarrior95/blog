@@ -1,24 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Christopher Vierheller</title><link>https://example.com/</link><description>Recent content on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://example.com/about/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://example.com/about/</guid><description>&lt;p>Hey, I am Christopher (26 years old) from Frankfurt (Germany) and I am an IT professional who is currently employed as a Cybersecurity-Consultant working in the german banking industry as SOC-Analyst to analyze SIEM-Alerts and help improving the SIEM-Infrastructur for the client.
-Previously, I worked as an IT systemadministrator, IT support and IT project worker.&lt;br>
-This allowed me to gain technical experience with a wide range of IT systems.&lt;/p>
-&lt;p>I found strong interest in networks and cybersecurity in my role as systemadministrator and currently I am studying for certificates to soon be able to work in the field of networking &amp;amp; network security.&lt;/p>
-&lt;p>Currently pursuing the compTia Security+ certification with an anticipated passing date of end of July.
-Afterwards I want to finish the CCNA Certification (Cisco) in a time frame of 4 months which I started to learn for in the last months in my role as systemadministrator.&lt;br>
-I am passionate about IT in general and looking forward to connect with people and have conversations about our great field.&lt;/p>
-&lt;p>My published articles will have a focus on networking and cybersecurity but occasionally there could always be a general IT topic.&lt;/p>
-&lt;p>Feel free to keep in touch using your preferred social media – I have linked to all my social media accounts to the left!&lt;/p>
-&lt;p>Have a good read !&lt;br>
-Christopher&lt;br>
-&lt;img src="https://example.com/about/christopher-3.png"
-width="465"
-height="417"
-srcset="https://example.com/about/christopher-3_hu0ad00fe31a93ac760fbe6e63b2048101_201531_480x0_resize_box_3.png 480w, https://example.com/about/christopher-3_hu0ad00fe31a93ac760fbe6e63b2048101_201531_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="New Blue Router Symbol"
-class="gallery-image"
-data-flex-grow="111"
-data-flex-basis="267px"
->&lt;/p></description></item><item><title>Archives</title><link>https://example.com/archives/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://example.com/archives/</guid><description/></item><item><title>How to add custom symbols in EVE-NG</title><link>https://example.com/p/how-to-add-custom-symbols-in-eve-ng/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://example.com/p/how-to-add-custom-symbols-in-eve-ng/</guid><description>&lt;img src="https://example.com/p/how-to-add-custom-symbols-in-eve-ng/Next-Generation-Data-Centers-Everything-You-Need-to-Know.jpeg" alt="Featured image of post How to add custom symbols in EVE-NG" />&lt;p>Hello guys,&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Networks on Christopher Vierheller</title><link>https://example.com/categories/networks/</link><description>Recent content in Networks on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/networks/index.xml" rel="self" type="application/rss+xml"/><item><title>How to add custom symbols in EVE-NG</title><link>https://example.com/p/how-to-add-custom-symbols-in-eve-ng/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://example.com/p/how-to-add-custom-symbols-in-eve-ng/</guid><description>&lt;img src="https://example.com/p/how-to-add-custom-symbols-in-eve-ng/Next-Generation-Data-Centers-Everything-You-Need-to-Know.jpeg" alt="Featured image of post How to add custom symbols in EVE-NG" />&lt;p>Hello guys,&lt;/p>
 &lt;p>have you always wanted to replace the default symbols in EVE-NG and use your own ?
 Today I will show you how to do this with little effort and even provide you with clear and beautiful blue network icons.&lt;/p>
 &lt;h2 id="requirements">Requirements&lt;/h2>
@@ -94,4 +74,4 @@ data-flex-basis="546px"
 &lt;p>I hope you have fun with the new symbols and my tutorial was useful : )&lt;/p>
 &lt;p>Reach out on my social-media accounts when you have any questions.&lt;/p>
 &lt;p>Thanks for reading,&lt;br>
-Christopher&lt;/p></description></item><item><title>Search</title><link>https://example.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.com/search/</guid><description/></item></channel></rss>
+Christopher&lt;/p></description></item></channel></rss>
