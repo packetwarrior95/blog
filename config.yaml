@@ -1,13 +1,13 @@
-baseurl: "https://packet-warrior.net/"
+baseurl: https://example.com
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
-title: Packet-Warriorr Blg
+title: Packet-Warrior Blog
 
 languages:
     en:
         languageName: English
-        title: Example Site
+        title: Christopher Vierheller
         weight: 1
 
 # Change it to your Disqus shortname before using
@@ -17,12 +17,8 @@ disqusShortname: hugo-theme-stack
 googleAnalytics:
 
 # Theme i18n support
-# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+# Available values: ar, bn, ca, de, el, en
 DefaultContentLanguage: en
-
-# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
-# This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: false
 
 permalinks:
     post: /p/:slug/
@@ -36,7 +32,7 @@ params:
     favicon:
 
     footer:
-        since: 2020
+        since: 2022
         customText:
 
     dateFormat:
@@ -44,12 +40,13 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: >
+          Packet-Warrior Blog  ( ͡ᵔ ͜ʖ ͡ᵔ ) 
+          Publishing articles throughout my tech journey with a focus on Networks & Cybersecurity.
         avatar:
-            enabled: true
-            local: true
-            src: img/avatar.png
+            enabled: false
+            local: false
+            src: images/avatar2_hu2b1e163099ef7e6755d59c171c8949f5_39335_300x0_resize_box_3.png
 
     article:
         math: false
@@ -57,7 +54,7 @@ params:
         readingTime: true
         license:
             enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
+            default: Author Christopher Vierheller
 
     comments:
         enabled: true
@@ -187,15 +184,21 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+          url: https://github.com/packetwarrior95
           params:
               icon: brand-github
 
         - identifier: twitter
           name: Twitter
-          url: https://twitter.com
+          url: https://twitter.com/Packet_Warrior
           params:
               icon: brand-twitter
+
+        - identifier: linkedin
+          name: Linkedin
+          url: https://linkedin.com/in/vierheller-5407/
+          params:
+              icon: user 
 
 related:
     includeNewer: true

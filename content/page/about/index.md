@@ -1,13 +1,13 @@
 ---
 title: About
-description: Hugo, the world's fastest framework for building websites
-date: '2019-02-28'
+description: 
+date: '2022-07-02'
 aliases:
   - about-us
   - about-hugo
   - contact
 license: CC BY-NC-ND
-lastmod: '2020-10-09'
+lastmod: '2022-07-02'
 menu:
     main: 
         weight: -90
@@ -15,20 +15,20 @@ menu:
             icon: user
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hey, I am Christopher (26 years old) from Frankfurt (Germany) and I am an IT professional who is currently employed as a Cybersecurity-Consultant working in the german banking industry as SOC-Analyst to analyze SIEM-Alerts and help improving the SIEM-Infrastructur for the client.
+Previously, I worked as an IT systemadministrator, IT support and IT project worker.  
+This allowed me to gain technical experience with a wide range of IT systems.
 
-Hugo makes use of a variety of open source projects including:
+I found strong interest in networks and cybersecurity in my role as systemadministrator and currently I am studying for certificates to soon be able to work in the field of networking & network security.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+Currently pursuing the compTia Security+ certification with an anticipated passing date of end of July. 
+Afterwards I want to finish the CCNA Certification (Cisco) in a time frame of 4 months which I started to learn for in the last months in my role as systemadministrator.  
+I am passionate about IT in general and looking forward to connect with people and have conversations about our great field.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+My published articles will have a focus on networking and cybersecurity but occasionally there could always be a general IT topic.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+Feel free to keep in touch using your preferred social media – I have linked to all my social media accounts to the left!
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Have a good read !  
+Christopher  
+![New Blue Router Symbol](christopher-3.png) 
