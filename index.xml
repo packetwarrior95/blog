@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Christopher Vierheller</title><link>https://example.com/</link><description>Recent content on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://example.com/about/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://example.com/about/</guid><description>&lt;p>Hey, I am Christopher (26 years old) from Frankfurt (Germany) and I am an IT professional who is currently employed as a Cybersecurity-Consultant working in the german banking industry as SOC-Analyst to analyze SIEM-Alerts and help improving the SIEM-Infrastructur for the client.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Christopher Vierheller</title><link>https://packet-warrior.net/</link><description>Recent content on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://packet-warrior.net/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://packet-warrior.net/about/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/about/</guid><description>&lt;p>Hey, I am Christopher (26 years old) from Frankfurt (Germany) and I am an IT professional who is currently employed as a Cybersecurity-Consultant working in the german banking industry as SOC-Analyst to analyze SIEM-Alerts and help improving the SIEM-Infrastructur for the client.
 Previously, I worked as an IT systemadministrator, IT support and IT project worker.&lt;br>
 This allowed me to gain technical experience with a wide range of IT systems.&lt;/p>
 &lt;p>I found strong interest in networks and cybersecurity in my role as systemadministrator and currently I am studying for certificates to soon be able to work in the field of networking &amp;amp; network security.&lt;/p>
@@ -9,16 +9,16 @@ I am passionate about IT in general and looking forward to connect with people a
 &lt;p>Feel free to keep in touch using your preferred social media – I have linked to all my social media accounts to the left!&lt;/p>
 &lt;p>Have a good read !&lt;br>
 Christopher&lt;br>
-&lt;img src="https://example.com/about/christopher-3.png"
+&lt;img src="https://packet-warrior.net/about/christopher-3.png"
 width="465"
 height="417"
-srcset="https://example.com/about/christopher-3_hu0ad00fe31a93ac760fbe6e63b2048101_201531_480x0_resize_box_3.png 480w, https://example.com/about/christopher-3_hu0ad00fe31a93ac760fbe6e63b2048101_201531_1024x0_resize_box_3.png 1024w"
+srcset="https://packet-warrior.net/about/christopher-3_hu0ad00fe31a93ac760fbe6e63b2048101_201531_480x0_resize_box_3.png 480w, https://packet-warrior.net/about/christopher-3_hu0ad00fe31a93ac760fbe6e63b2048101_201531_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="New Blue Router Symbol"
 class="gallery-image"
 data-flex-grow="111"
 data-flex-basis="267px"
->&lt;/p></description></item><item><title>Archives</title><link>https://example.com/archives/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://example.com/archives/</guid><description/></item><item><title>How to add custom symbols in EVE-NG</title><link>https://example.com/p/how-to-add-custom-symbols-in-eve-ng/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://example.com/p/how-to-add-custom-symbols-in-eve-ng/</guid><description>&lt;img src="https://example.com/p/how-to-add-custom-symbols-in-eve-ng/Next-Generation-Data-Centers-Everything-You-Need-to-Know.jpeg" alt="Featured image of post How to add custom symbols in EVE-NG" />&lt;p>Hello guys,&lt;/p>
+>&lt;/p></description></item><item><title>Archives</title><link>https://packet-warrior.net/archives/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/archives/</guid><description/></item><item><title>How to add custom symbols in EVE-NG</title><link>https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/</guid><description>&lt;img src="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/Next-Generation-Data-Centers-Everything-You-Need-to-Know.jpeg" alt="Featured image of post How to add custom symbols in EVE-NG" />&lt;p>Hello guys,&lt;/p>
 &lt;p>have you always wanted to replace the default symbols in EVE-NG and use your own ?
 Today I will show you how to do this with little effort and even provide you with clear and beautiful blue network icons.&lt;/p>
 &lt;h2 id="requirements">Requirements&lt;/h2>
@@ -37,10 +37,10 @@ Now just start your preferred SFTP-program, mine is &lt;a class="link" href="htt
 >The NetworkBerg&lt;/a> resized them in a finished png-format ready to use.&lt;/p>
 &lt;p>Download the network symbols as zip-file from &lt;a class="link" href="https://github.com/TheNetworkBerg/ecceman-affinity-EVE-NG-Symbols" target="_blank" rel="noopener"
 >The NetworkBergs Github&lt;/a> and upload the zip-file to a random location in your EVE-NG machine via SFTP.&lt;/p>
-&lt;p>&lt;img src="https://example.com/p/how-to-add-custom-symbols-in-eve-ng/eveng_symbol_upload.png"
+&lt;p>&lt;img src="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/eveng_symbol_upload.png"
 width="1208"
 height="352"
-srcset="https://example.com/p/how-to-add-custom-symbols-in-eve-ng/eveng_symbol_upload_hu7c70bcbdfaaf6e63f330e6adcdbe5587_88180_480x0_resize_box_3.png 480w, https://example.com/p/how-to-add-custom-symbols-in-eve-ng/eveng_symbol_upload_hu7c70bcbdfaaf6e63f330e6adcdbe5587_88180_1024x0_resize_box_3.png 1024w"
+srcset="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/eveng_symbol_upload_hu7c70bcbdfaaf6e63f330e6adcdbe5587_88180_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/eveng_symbol_upload_hu7c70bcbdfaaf6e63f330e6adcdbe5587_88180_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Symbol ZIP-File Upload"
 class="gallery-image"
@@ -71,20 +71,20 @@ data-flex-basis="823px"
 &lt;/div>
 &lt;/div>&lt;h2 id="before-vs-after">before vs after&lt;/h2>
 &lt;p>Here you can take a look at an example with the new symbols in comparison to the standard-symbols in EVE-NG.&lt;/p>
-&lt;p>&lt;img src="https://example.com/p/how-to-add-custom-symbols-in-eve-ng/eve_symbol_2.png"
+&lt;p>&lt;img src="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/eve_symbol_2.png"
 width="758"
 height="341"
-srcset="https://example.com/p/how-to-add-custom-symbols-in-eve-ng/eve_symbol_2_hueb960d100da42c8fbc8b5a41003a4646_30956_480x0_resize_box_3.png 480w, https://example.com/p/how-to-add-custom-symbols-in-eve-ng/eve_symbol_2_hueb960d100da42c8fbc8b5a41003a4646_30956_1024x0_resize_box_3.png 1024w"
+srcset="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/eve_symbol_2_hueb960d100da42c8fbc8b5a41003a4646_30956_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/eve_symbol_2_hueb960d100da42c8fbc8b5a41003a4646_30956_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="New Blue Router Symbol"
 class="gallery-image"
 data-flex-grow="222"
 data-flex-basis="533px"
 >&lt;/p>
-&lt;p>&lt;img src="https://example.com/p/how-to-add-custom-symbols-in-eve-ng/eve_ng_symbol_classic.png"
+&lt;p>&lt;img src="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/eve_ng_symbol_classic.png"
 width="797"
 height="350"
-srcset="https://example.com/p/how-to-add-custom-symbols-in-eve-ng/eve_ng_symbol_classic_hufa9d24e5519d41d2191b00bd804e34fe_29534_480x0_resize_box_3.png 480w, https://example.com/p/how-to-add-custom-symbols-in-eve-ng/eve_ng_symbol_classic_hufa9d24e5519d41d2191b00bd804e34fe_29534_1024x0_resize_box_3.png 1024w"
+srcset="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/eve_ng_symbol_classic_hufa9d24e5519d41d2191b00bd804e34fe_29534_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/eve_ng_symbol_classic_hufa9d24e5519d41d2191b00bd804e34fe_29534_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Standard Router Symbol"
 class="gallery-image"
@@ -94,4 +94,4 @@ data-flex-basis="546px"
 &lt;p>I hope you have fun with the new symbols and my tutorial was useful : )&lt;/p>
 &lt;p>Reach out on my social-media accounts when you have any questions.&lt;/p>
 &lt;p>Thanks for reading,&lt;br>
-Christopher&lt;/p></description></item><item><title>Search</title><link>https://example.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.com/search/</guid><description/></item></channel></rss>
+Christopher&lt;/p></description></item><item><title>Search</title><link>https://packet-warrior.net/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/search/</guid><description/></item></channel></rss>
