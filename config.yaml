@@ -57,7 +57,7 @@ params:
             default: Author Christopher Vierheller
 
     comments:
-        enabled: false
+        enabled: true
         provider: disqus
 
         disqusjs:
