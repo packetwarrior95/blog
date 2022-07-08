@@ -14,7 +14,7 @@ languages:
 disqusShortname: hugo-theme-stack
 
 # GA Tracking ID
-googleAnalytics: "G-RKTBB3FZG0"
+googleAnalytics:
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en
