@@ -200,6 +200,11 @@ menu:
           params:
               icon: user 
 
+        - identifier: mail
+          name: Mail
+          url: mailto:christopher@packet-warrior.net
+          params:
+              icon: messages
 related:
     includeNewer: true
     threshold: 60
