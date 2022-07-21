@@ -31,4 +31,4 @@ Feel free to keep in touch using your preferred social media – I have linked t
 
 Have a good read !  
 Christopher  
-![New Blue Router Symbol](christopher-3.png) 
+![Portrait](Portrait.jpg) 
