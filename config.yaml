@@ -46,7 +46,7 @@ params:
         avatar:
             enabled: true
             local: false
-            src: about/Head_Avatar.png
+            src: about/Kopf2.png
 
     article:
         math: false
