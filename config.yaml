@@ -44,9 +44,9 @@ params:
           Packet-Warrior Blog  ( ͡ᵔ ͜ʖ ͡ᵔ ) 
           Publishing articles throughout my tech journey with a focus on Networks & Cybersecurity.
         avatar:
-            enabled: false
+            enabled: true
             local: false
-            src: images/avatar2_hu2b1e163099ef7e6755d59c171c8949f5_39335_300x0_resize_box_3.png
+            src: about/Head_Avatar.png
 
     article:
         math: false
