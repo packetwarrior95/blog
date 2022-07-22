@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cybersecurity on Christopher Vierheller</title><link>https://packet-warrior.net/categories/cybersecurity/</link><description>Recent content in Cybersecurity on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 22 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://packet-warrior.net/categories/cybersecurity/index.xml" rel="self" type="application/rss+xml"/><item><title>How I passed my compTia Security+ Certification</title><link>https://packet-warrior.net/p/how-i-passed-my-comptia-security-certification/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-i-passed-my-comptia-security-certification/</guid><description>&lt;img src="https://packet-warrior.net/p/how-i-passed-my-comptia-security-certification/SecurityPlus_Logo_Certified_CE.jpg" alt="Featured image of post How I passed my compTia Security+ Certification" />&lt;p>Hello guys,&lt;/p>
+&lt;p>I just passed my Security+ exam on the first attempt and wanted to show you what resources I used and how my experience can prepare you for the exam. Additionally, here is my personal opinion about the certificate and what I learned from it.&lt;/p>
+&lt;h2 id="my-testcenter-exam-experience">My Testcenter Exam-Experience&lt;/h2>
+&lt;p>I took the exam in Frankfurt (Germany) at a Pearson-Vue Testcenter.
+Of course I was nervous :) The staff was nice and did a good job of making me a little less nervous. But as soon as I was brought into the testing room and the exam started I was able to concentrate and block out the rest. I could see that someone took the AWS Solution-Architect exam and I just thought to myself that this guys has a way harder task then I should be able to pass this little Security+ exam.&lt;/p>
+&lt;p>When I saw the screen with &amp;ldquo;Passed&amp;rdquo; after the compTia survey, I said &amp;ldquo;yes&amp;rdquo; and made like a victory fist and then quietly left the room.&lt;/p>
+&lt;h2 id="my-study-resources-and-exam-preaparation">My Study-Resources and Exam-Preaparation&lt;/h2>
+&lt;p>My employer bought me the compTia-bundle with the Voucher, Official Study Guide and the CertMaster.&lt;/p>
+&lt;p>I read the whole Official Book (620 sites) and made the exercises.
+Then I made flashcards in &lt;a class="link" href="https://apps.ankiweb.net" target="_blank" rel="noopener"
+>Anki&lt;/a> 4 weeks before the exam to remember the most important concepts and things I had problems with. The last two weeks I downloaded the official free Security+ App from the AppStore. The App is way better than the Cert-Master because the questions did not felt they were near the exam-questions. The App is not so much talked about/known and kinda underrated. In the endphase I watched Professor Messer YT-Videos on topics I had problems with like PKI or Cross-Site Scripting and did CertMaster-Questions.&lt;/p>
+&lt;ul>
+&lt;li>Read the Official Study Guide&lt;/li>
+&lt;li>Made Anki Flashcards for the most important concepts/topics&lt;/li>
+&lt;li>Watched &lt;a class="link" href="https://www.youtube.com/watch?v=9NE33fpQuw8&amp;amp;list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8" target="_blank" rel="noopener"
+>Professor Messer YouTube-Videos&lt;/a> on difficult topics&lt;/li>
+&lt;li>Free Security+ App -&amp;gt; &lt;a class="link" href="https://apps.apple.com/de/app/comptia-security-exam-prep/id1501784033" target="_blank" rel="noopener"
+>Apple&lt;/a> &amp;amp; &lt;a class="link" href="https://play.google.com/store/apps/details?id=com.abc.comptiasecurityplus&amp;amp;hl=gsw&amp;amp;gl=US" target="_blank" rel="noopener"
+>Android&lt;/a>&lt;/li>
+&lt;li>CertMaster Questions and Exercises&lt;/li>
+&lt;/ul>
+&lt;h2 id="exam-tips">Exam-Tips&lt;/h2>
+&lt;p>Just quick exam-tips for the final day.&lt;/p>
+&lt;ul>
+&lt;li>Do not learn anything on the exam-day, it just makes you insecure!&lt;/li>
+&lt;li>Drink and eat something healthy before your exam (Water &amp;amp; Fruits)&lt;/li>
+&lt;li>When you cannot solve fast the performance-based questions then flag them and go next. You can review and continue with them after you finished the rest.&lt;/li>
+&lt;/ul>
+&lt;h2 id="my-opinion-on-the-security-certification">My opinion on the Security+ Certification&lt;/h2>
+&lt;p>I work right now already in the Cybersecurity-area as SOC-Analyst but I still learned alot I would say. The certification gives you a really good oversight about Cybersecurity and all its areas. After the certification I felt I had a better understanding for Cybersecurity. It really surprised me how big of a part availability and Disaster-Recovery of servers are in Cybersecurity. I always thought the operations-team or serveradmins were responsible for that. I can recommend this certification to everyone, even when you do not work specifically in Cybersecurity since security will play a major role in the future.&lt;/p>
+&lt;p>I hope this was useful for you and helps you a little bit for your certificationö&lt;/p>
+&lt;p>Reach out on my social-media accounts when you have any questions.&lt;/p>
+&lt;p>Thanks for reading,&lt;br>
+Christopher&lt;/p></description></item></channel></rss>
