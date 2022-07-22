@@ -29,6 +29,8 @@ My published articles will have a focus on networking and cybersecurity but occa
 
 Feel free to keep in touch using your preferred social media – I have linked to all my social media accounts to the left!
 
+Update (21.07.2022): I just passed my compTia Security+ certification
+
 Have a good read !  
 Christopher  
-![Portrait](Portrait.jpg) 
+![Portrait1](Portrait.png) 
