@@ -10,9 +10,15 @@ I am passionate about IT in general and looking forward to connect with people a
 &lt;p>Update (21.07.2022): I just passed my compTia Security+ certification&lt;/p>
 &lt;p>Have a good read !&lt;br>
 Christopher&lt;br>
-&lt;img src="https://packet-warrior.net/Portrait.png"
+&lt;img src="https://packet-warrior.net/about/Portrait.png"
+width="480"
+height="720"
+srcset="https://packet-warrior.net/about/Portrait_hu5b2b2577cbb710ad11347d81281a75b6_334854_480x0_resize_box_3.png 480w, https://packet-warrior.net/about/Portrait_hu5b2b2577cbb710ad11347d81281a75b6_334854_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Portrait1"
+class="gallery-image"
+data-flex-grow="66"
+data-flex-basis="160px"
 >&lt;/p></description></item><item><title>Archives</title><link>https://packet-warrior.net/archives/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/archives/</guid><description/></item><item><title>How to add custom symbols in EVE-NG</title><link>https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/</guid><description>&lt;img src="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/Next-Generation-Data-Centers-Everything-You-Need-to-Know.jpeg" alt="Featured image of post How to add custom symbols in EVE-NG" />&lt;p>Hello guys,&lt;/p>
 &lt;p>have you always wanted to replace the default symbols in EVE-NG and use your own ?
 Today I will show you how to do this with little effort and even provide you with clear and beautiful blue network icons.&lt;/p>
