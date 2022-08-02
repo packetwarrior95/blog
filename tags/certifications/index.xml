@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Certifications on Christopher Vierheller</title><link>https://packet-warrior.net/tags/certifications/</link><description>Recent content in Certifications on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 22 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://packet-warrior.net/tags/certifications/index.xml" rel="self" type="application/rss+xml"/><item><title>How I passed my compTia Security+ Certification</title><link>https://packet-warrior.net/p/how-i-passed-my-comptia-security-certification/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-i-passed-my-comptia-security-certification/</guid><description>&lt;img src="https://packet-warrior.net/p/how-i-passed-my-comptia-security-certification/SecurityPlus_Logo_Certified_CE.jpg" alt="Featured image of post How I passed my compTia Security+ Certification" />&lt;p>Hello guys,&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Certifications on Christopher Vierheller</title><link>https://packet-warrior.net/tags/certifications/</link><description>Recent content in Certifications on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://packet-warrior.net/tags/certifications/index.xml" rel="self" type="application/rss+xml"/><item><title>How Mindmaps help you study for your cerification (CCNA example)</title><link>https://packet-warrior.net/p/how-mindmaps-help-you-study-for-your-cerification-ccna-example/</link><pubDate>Tue, 02 Aug 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-mindmaps-help-you-study-for-your-cerification-ccna-example/</guid><description>&lt;img src="https://packet-warrior.net/p/how-mindmaps-help-you-study-for-your-cerification-ccna-example/xmind1.png" alt="Featured image of post How Mindmaps help you study for your cerification (CCNA example)" />&lt;p>Hello,&lt;/p>
+&lt;p>while studying for my CCNA certification I came across mindmaps and how they help you to study and get a feeling for the certifiation.&lt;/p>
+&lt;p>The following applies for all technical certifications. In my case I created a CCNA-mindmap.&lt;/p>
+&lt;h2 id="why-mindmaps-are-useful-when-learning-for-your-certification">Why Mindmaps are useful when learning for your certification&lt;/h2>
+&lt;p>Mindmaps give you a visual overview of the exam and the specific topics you need to know to pass the exam.&lt;/p>
+&lt;p>Mindmapping is an active learning techniques where we retrieve information. Our brain does not store information as words, sentences or paragraphs. Instead, it keeps information as key points, diagrams and pictures. Mindmapping for studying is beneficial because mindmaps work similar to that of your brain. It makes information absorption easy.&lt;/p>
+&lt;p>This &lt;strong>&lt;a class="link" href="https://moinulkarim.com/how-to-use-mind-maps-for-studying" target="_blank" rel="noopener"
+>article&lt;/a>&lt;/strong> from Moniul goes more in-depth with reasearches and explanations how mindmaps help you to study. Check it out !&lt;/p>
+&lt;p>&lt;img src="https://packet-warrior.net/p/how-mindmaps-help-you-study-for-your-cerification-ccna-example/CCNA-mind-map.png"
+width="741"
+height="274"
+srcset="https://packet-warrior.net/p/how-mindmaps-help-you-study-for-your-cerification-ccna-example/CCNA-mind-map_hu7fbd0421a6b5858f8681374bbc804b75_18852_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/how-mindmaps-help-you-study-for-your-cerification-ccna-example/CCNA-mind-map_hu7fbd0421a6b5858f8681374bbc804b75_18852_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Mindmap example / Source: Google Pictures"
+class="gallery-image"
+data-flex-grow="270"
+data-flex-basis="649px"
+>&lt;/p>
+&lt;h2 id="x-mind-free-mindmap-software">X-Mind (free Mindmap-Software)&lt;/h2>
+&lt;p>I recommend the free Mindmap-Software &lt;strong>&lt;a class="link" href="https://xmind.net" target="_blank" rel="noopener"
+>XMIND&lt;/a>&lt;/strong>.&lt;/p>
+&lt;p>If you really love it you can buy the annual subscription (60$) for additional features.&lt;/p>
+&lt;ul>
+&lt;li>The software is easy to use&lt;/li>
+&lt;li>You get quickly started and create your own mindmaps&lt;/li>
+&lt;li>XMIND automatically adjust colors so they play well together&lt;/li>
+&lt;li>Change the layout or the form of objectives on the fly&lt;/li>
+&lt;li>Lots of Mindmap-Templates&lt;/li>
+&lt;/ul>
+&lt;h2 id="my-ccna-mindmap-download-links-included">My CCNA-Mindmap (Download-Links included)&lt;/h2>
+&lt;p>When I created the mindmap for the CCNA, I divided the topics into the five main domains network fundamentals, network access, IP connectivity, IP services, security fundamentals and automation. Then I created subnodes for every topic and subnodes of the subnodes when the topic goes deeper and many concepts also technical terms need to be known.&lt;/p>
+&lt;p>Download my CCNA-Mindmap on my &lt;strong>&lt;a class="link" href="https://github.com/packetwarrior95/mindmap-ccna" target="_blank" rel="noopener"
+>Github Profile&lt;/a>&lt;/strong> as PDF, PNG or XMIND-File.&lt;/p>
+&lt;p>You can edit the CCNA-mindmap with the xmind-file as you like when you download XMIND.&lt;/p>
+&lt;h2 id="find-template-mindmaps-with-mindmeister">Find Template-Mindmaps with mindmeister&lt;/h2>
+&lt;p>&lt;strong>&lt;a class="link" href="https://www.mindmeister.com" target="_blank" rel="noopener"
+>Mindmeister&lt;/a>&lt;/strong> is another online-tool for creating mindmaps.&lt;br>
+This website has a extensive public mindmap-database for certifications.&lt;/p>
+&lt;p>&lt;strong>Examples:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.mindmeister.com/de/1869700889/ccna-200-301" target="_blank" rel="noopener"
+>CCNA&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.mindmeister.com/de/544666576/aws-solution-architect-associates" target="_blank" rel="noopener"
+>AWS Solution Architect Associate&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.mindmeister.com/de/mind-map-examples?category=&amp;amp;language=&amp;amp;query=Azure&amp;#43;Administrator" target="_blank" rel="noopener"
+>MS Azure Administrator&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.mindmeister.com/de/mind-map-examples?category=&amp;amp;language=&amp;amp;query=comptia&amp;#43;Security" target="_blank" rel="noopener"
+>CompTia Security+&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Another resource for Mindmap-Templates is &lt;a class="link" href="https://www.biggerplate.com" target="_blank" rel="noopener"
+>Biggerplate&lt;/a>.&lt;/p>
+&lt;p>I recommend you to make your own mindmap but you can also download a finished mindmap to get inspired or to get a quick overview.&lt;/p>
+&lt;p>I hope this was useful for you and helps you in your learning-process to get your certification.&lt;/p>
+&lt;p>Reach out on my social-media accounts when you have any questions.&lt;/p>
+&lt;p>Thanks for reading,&lt;br>
+Christopher&lt;/p></description></item><item><title>How I passed my compTia Security+ Certification</title><link>https://packet-warrior.net/p/how-i-passed-my-comptia-security-certification/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-i-passed-my-comptia-security-certification/</guid><description>&lt;img src="https://packet-warrior.net/p/how-i-passed-my-comptia-security-certification/SecurityPlus_Logo_Certified_CE.jpg" alt="Featured image of post How I passed my compTia Security+ Certification" />&lt;p>Hello guys,&lt;/p>
 &lt;p>I just passed my Security+ exam on the first attempt and wanted to show you what resources I used and how my experience can prepare you for the exam. Additionally, here is my personal opinion about the certificate and what I learned from it.&lt;/p>
 &lt;h2 id="my-testcenter-exam-experience">My Testcenter Exam-Experience&lt;/h2>
 &lt;p>I took the exam in Frankfurt (Germany) at a Pearson-Vue Testcenter.
