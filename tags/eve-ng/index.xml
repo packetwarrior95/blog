@@ -1,4 +1,303 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>EVE-NG on Christopher Vierheller</title><link>https://packet-warrior.net/tags/eve-ng/</link><description>Recent content in EVE-NG on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://packet-warrior.net/tags/eve-ng/index.xml" rel="self" type="application/rss+xml"/><item><title>How to add custom symbols in EVE-NG</title><link>https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/</guid><description>&lt;img src="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/Next-Generation-Data-Centers-Everything-You-Need-to-Know.jpeg" alt="Featured image of post How to add custom symbols in EVE-NG" />&lt;p>Hello guys,&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>EVE-NG on Christopher Vierheller</title><link>https://packet-warrior.net/tags/eve-ng/</link><description>Recent content in EVE-NG on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 03 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://packet-warrior.net/tags/eve-ng/index.xml" rel="self" type="application/rss+xml"/><item><title>Automate your CCNA-Labs with Ansible</title><link>https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/</link><pubDate>Thu, 03 Nov 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/</guid><description>&lt;img src="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/ansible_cover_1.png" alt="Featured image of post Automate your CCNA-Labs with Ansible" />&lt;p>Hello guys,&lt;/p>
+&lt;p>have you always wanted to start trying out network automation tools like Ansible?
+Where do you start ? Today I will show you how to start with Ansible in a practical scenario to get your feet wet with this topic.
+You can learn network automation while learning for your CCNA to make your own automated labs. This will gain you valuable knowledge for your future. You will need EVE-NG (open-source) for this tutorial. I will link you to sources where to go after the tutorial to gain more knowledge about Ansible since teaching the concepts of Ansible will exceed the frame of this blog post.&lt;/p>
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;ul>
+&lt;li>installed and running version of EVE-NG in the same subnet as your homerouter&lt;/li>
+&lt;li>basic network-knowledge and little experience with Cisco routers&lt;/li>
+&lt;li>Cisco VIRL/CML Images (can only be purchased on the official Cisco Store)&lt;/li>
+&lt;li>WinSCP or another SFTP-client&lt;/li>
+&lt;/ul>
+&lt;h2 id="scenario--goals">Scenario / Goals&lt;/h2>
+&lt;p>We want to reach the goal in this scenario to configure the other interfaces of the routers Berlin and Paris and adding a static route, so that PC1 and PC2 can reach and ping each other. We will create a Ansible-Server which will orchestrate and configure the routers after we connect and configure the GigabitEthernert 0/0 interfaces of the routers to our home-subnet.&lt;/p>
+&lt;p>&lt;img src="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/Topology_.png"
+width="980"
+height="433"
+srcset="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/Topology__hu0c247a45ad155b30b08cf7708c494007_42274_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/Topology__hu0c247a45ad155b30b08cf7708c494007_42274_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Network-Topology"
+class="gallery-image"
+data-flex-grow="226"
+data-flex-basis="543px"
+>&lt;/p>
+&lt;h2 id="setup-ubuntu-server-and-install-ansible">Setup Ubuntu Server and install Ansible&lt;/h2>
+&lt;p>First you need to download this special EVE-NG Linux Ubuntu Image &lt;strong>&lt;a class="link" href="https://www.eve-ng.net/index.php/documentation/howtos/howto-create-own-linux-host-image/" target="_blank" rel="noopener"
+>here&lt;/a>&lt;/strong> and follow the instructions on the website.&lt;/p>
+&lt;p>Now you will create a new EVE-NG Lab and will add a Linux-Ubuntu Server.
+You need to add now the other devices from the network-topology too.
+These are two cisco routers, one cisco switch, two virtual PC´s.
+Finally you need to add a network and select &lt;strong>ManagementCloud&lt;/strong> so that it is bridged to your home-router subnet for the Internet connection. Connect the devices like in my network-topology. The ubuntu-server will get automatically a IP from your DHCP-server.&lt;br>
+Start up all devices. We have to configure only the two routers on one interface and to allow ssh, so Ansible will get acces to the devices to push the configurations to it. Set here static IP-adresses out of your home-router´s DHCP address-space.&lt;/p>
+&lt;p>We will configure now a initial config to each Cisco Router so we can push configs to them and configure automatically the remaining things.
+You have to do this then for the Router-Paris too and configure the correct IP-address.
+The Gi0/0 interface will get a static IP, SSH will be enabled and the SSH-User &lt;strong>ansible&lt;/strong> with password &lt;strong>ansible&lt;/strong> will be created.&lt;/p>
+&lt;p>Initial Configuration for the Router-Berlin:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> Router-Berlin(config)#int Gi0/0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config)#ip addr 192.168.0.35 255.255.255.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config)#no shutdown
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin#conf t
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Enter configuration commands, one per line. End with CNTL/Z.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config)#username ansible priv 15 secret cisco
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config)#ip domain-name automation.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config)#crypto key generate rsa
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> The name for the keys will be: Router-Berlin.automation.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Choose the size of the key modulus in the range of 360 to 4096 for your
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> General Purpose Keys. Choosing a key modulus greater than 512 may take
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> a few minutes.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> How many bits in the modulus [512]: 1024
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> % Generating 1024 bit RSA keys, keys will be non-exportable...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> [OK] (elapsed time was 1 seconds)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config)#
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> *Oct 27 12:43:04.114: %SSH-5-ENABLED: SSH 1.99 has been enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config)#ip ssh version 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config)#line vty 0 15
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config-line)#login local
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Router-Berlin(config-line)#transport input ssh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/Router_Berlin_Config_IP.png"
+width="889"
+height="201"
+srcset="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/Router_Berlin_Config_IP_hu8568f4ef4c8040a125d0db586103fd7f_18188_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/Router_Berlin_Config_IP_hu8568f4ef4c8040a125d0db586103fd7f_18188_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Initial Configuration Berlin-Router"
+class="gallery-image"
+data-flex-grow="442"
+data-flex-basis="1061px"
+>&lt;/p>
+&lt;p>Now on the ubuntu-server I recommend you to do these following steps to update the system and to enable SSH.
+After that you can use your favorite SSH-Program to access the server.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> sudo apt-get update &amp;amp;&amp;amp; apt-get upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo dpkg-reconfigure keyboard-configuration
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo systemctl enable ssh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo systemctl start ssh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Default login credentials for this image:&lt;/p>
+&lt;ul>
+&lt;li>User: &lt;strong>user&lt;/strong> / Password &lt;strong>Test123&lt;/strong>&lt;/li>
+&lt;li>User: &lt;strong>root&lt;/strong> / Password &lt;strong>Test123&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Now we will install Ansible with the following commands and verify the version at the end.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> $ sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> $ sudo apt install software-properties-common
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> $ sudo add-apt-repository --yes --update ppa:ansible/ansible
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> $ sudo apt install ansible
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> $ ansible --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Add the Berlin and Paris router to the local host-file on the ubuntu system so the FQDN will get resolved immediately.
+Add these two lines text into the host-file with the command &lt;strong>nano /etc/host&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> 192.168.0.20 Router-Paris
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 192.168.0.35 Router-Berlin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>We will check now if we have a good and working network-connection with low latency to the Cisco-Routers. The results show we have a good connection between 1.5 and 2.5 ms.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> root@ubuntu22-server:/etc/ansible# ping Router-Berlin -c 5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> PING Router-Berlin (192.168.0.35) 56(84) bytes of data.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 64 bytes from Router-Berlin (192.168.0.35): icmp_seq=1 ttl=255 time=2.37 ms
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 64 bytes from Router-Berlin (192.168.0.35): icmp_seq=2 ttl=255 time=2.25 ms
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 64 bytes from Router-Berlin (192.168.0.35): icmp_seq=3 ttl=255 time=1.66 ms
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 64 bytes from Router-Berlin (192.168.0.35): icmp_seq=4 ttl=255 time=2.33 ms
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 64 bytes from Router-Berlin (192.168.0.35): icmp_seq=5 ttl=255 time=1.79 ms
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>The SSH-Connection will not work because of different encryption-algorithms which are supported on these different ssh-program of the devices.
+Add the following lines to the SSH-config (~/.ssh/config) on the Ubuntu-server to allow different encryption-algorithms.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> root@ubuntu22-server:~# nano ~/.ssh/config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> add text
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Host 192.168.0.35
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> KexAlgorithms +diffie-hellman-group-exchange-sha1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> HostkeyAlgorithms +ssh-rsa
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Host 192.168.0.20
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> KexAlgorithms +diffie-hellman-group-exchange-sha1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> HostkeyAlgorithms +ssh-rsa
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Confirm working SSH-access by connecting to the router.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">ssh ansible@192.168.0.35
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="uploading-ansible-files-and-playbooks">Uploading Ansible Files and Playbooks&lt;/h2>
+&lt;p>Download the &lt;a class="link" href="https://github.com/packetwarrior95/ansible-networkautomation" target="_blank" rel="noopener"
+>&lt;strong>ansible-networkautomation&lt;/strong>&lt;/a> folder on my Github and upload it to your ubuntu-server to the path &lt;strong>/etc/ansible&lt;/strong> (not the readme-file) with your favorite file-transfer program. I recommend WinSCP for this task.
+Here you can find playbooks and a &lt;strong>hosts&lt;/strong>-file. In the playbook we define what we will configure and in the host-file we define which device we configure and what way/connection-type we use for it. If you used different IP-addresses than me, you have to edit the file &lt;strong>/etc/ansible/hosts&lt;/strong> with your IP´s.
+The file-structure should look like this when you are done.&lt;/p>
+&lt;p>&lt;img src="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/ansible_playbook.png"
+width="819"
+height="205"
+srcset="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/ansible_playbook_hua23f75f7a2f9e1eaefaadc0a7cc55600_10074_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/ansible_playbook_hua23f75f7a2f9e1eaefaadc0a7cc55600_10074_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Ansible-Files"
+class="gallery-image"
+data-flex-grow="399"
+data-flex-basis="958px"
+>&lt;/p>
+&lt;h2 id="executing-ansible-playbooks-for-the-automated-configuration">Executing Ansible playbooks for the automated configuration&lt;/h2>
+&lt;p>Finally we did all the preparation work.&lt;/p>
+&lt;p>We can finally push the configuration to the two routers to reach our goal and without manually executing commands on the routers.&lt;/p>
+&lt;p>If you want to execute an Ansible-Playbook to execute a change, you just need the command &lt;strong>ansible-playbooks&lt;/strong> yaml-filename.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> sudo ansible-playbooks /etc/ansible/ccna-ansible/router_berlin_configuration.yaml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>You should now see something like this. Several changes were made.
+Here in the overview after the playbook-execution you see if something failed, if something was even changed and how many changes were done.&lt;/p>
+&lt;p>&lt;img src="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/router-paris-execution.png"
+width="1084"
+height="154"
+srcset="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/router-paris-execution_huc7906e4b4110a18a57879b85883a5835_11761_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/router-paris-execution_huc7906e4b4110a18a57879b85883a5835_11761_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Successful execution"
+class="gallery-image"
+data-flex-grow="703"
+data-flex-basis="1689px"
+>&lt;/p>
+&lt;p>Wuhuhuu!! We successfully configured automated the other router interfaces and added a static route to the routing table.&lt;/p>
+&lt;h2 id="checking-the-results--can-i-ping-pc2-from-pc-1-">Checking the results / Can I ping PC2 from PC 1 ?&lt;/h2>
+&lt;p>In the final step we will confirm the Ansible configuration by connecting to the devices and checking the current configuration.&lt;/p>
+&lt;p>&lt;strong>Ping from PC1 to PC2&lt;/strong>&lt;br>
+&lt;img src="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/result_ping_PC2.png"
+width="461"
+height="197"
+srcset="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/result_ping_PC2_hu8870eb7fe6a7872aeeec68f56c9cff6e_10684_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/result_ping_PC2_hu8870eb7fe6a7872aeeec68f56c9cff6e_10684_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Successful Ping"
+class="gallery-image"
+data-flex-grow="234"
+data-flex-basis="561px"
+>&lt;/p>
+&lt;p>&lt;strong>Router-Berlin: Interface IP Configuration&lt;/strong>
+&lt;img src="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/result_Router_Berlin_IP_int.png"
+width="704"
+height="152"
+srcset="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/result_Router_Berlin_IP_int_hu06dd25f1e02f863ec436eca8a001c12c_11757_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/result_Router_Berlin_IP_int_hu06dd25f1e02f863ec436eca8a001c12c_11757_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Correct IP Addresses on the Interface"
+class="gallery-image"
+data-flex-grow="463"
+data-flex-basis="1111px"
+>&lt;/p>
+&lt;p>&lt;strong>Router-Berlin: IP Routingtable&lt;/strong>
+&lt;img src="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/result_Router_Berlin_IP_Route.png"
+width="556"
+height="175"
+srcset="https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/result_Router_Berlin_IP_Route_hu6f18c5e7bb217cbc2f37617cf00d12a4_15154_480x0_resize_box_3.png 480w, https://packet-warrior.net/p/automate-your-ccna-labs-with-ansible/result_Router_Berlin_IP_Route_hu6f18c5e7bb217cbc2f37617cf00d12a4_15154_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Correct new IP-Routes"
+class="gallery-image"
+data-flex-grow="317"
+data-flex-basis="762px"
+>&lt;/p>
+&lt;p>We can confirm that everything was successful configured.&lt;/p>
+&lt;h2 id="where-to-get-more-information-about-ansible">Where to get more information about Ansible&lt;/h2>
+&lt;p>Now you can continue to learn about Ansible with these resources:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://www.pluralsight.com/courses/ansible-network-automation-getting-started" target="_blank" rel="noopener"
+>&lt;strong>Pluralsight-Course&lt;/strong>&lt;/a> by Christopher Hart (recommended)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://docs.ansible.com/ansible/latest/user_guide/index.html#getting-started" target="_blank" rel="noopener"
+>&lt;strong>Official Ansible Documentation&lt;/strong>&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://docs.ansible.com/ansible/latest/collections/cisco/ios/index.html" target="_blank" rel="noopener"
+>&lt;strong>Cisco IOS Modules/Playbooks&lt;/strong>&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Books: Mastering Python Networking by Eric Chou&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>I hope you learnt something and my tutorial was useful : )&lt;/p>
+&lt;p>Reach out on my social-media accounts when you have any questions.&lt;/p>
+&lt;p>Thanks for reading,&lt;br>
+Christopher&lt;/p></description></item><item><title>How to add custom symbols in EVE-NG</title><link>https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/</guid><description>&lt;img src="https://packet-warrior.net/p/how-to-add-custom-symbols-in-eve-ng/Next-Generation-Data-Centers-Everything-You-Need-to-Know.jpeg" alt="Featured image of post How to add custom symbols in EVE-NG" />&lt;p>Hello guys,&lt;/p>
 &lt;p>have you always wanted to replace the default symbols in EVE-NG and use your own ?
 Today I will show you how to do this with little effort and even provide you with clear and beautiful blue network icons.&lt;/p>
 &lt;h2 id="requirements">Requirements&lt;/h2>
