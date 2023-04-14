@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cisco on Christopher Vierheller</title><link>https://packet-warrior.net/tags/cisco/</link><description>Recent content in Cisco on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://packet-warrior.net/tags/cisco/index.xml" rel="self" type="application/rss+xml"/><item><title>How I passed my CCNA 200-301 Certification</title><link>https://packet-warrior.net/p/how-i-passed-my-ccna-200-301-certification/</link><pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-i-passed-my-ccna-200-301-certification/</guid><description>&lt;img src="https://packet-warrior.net/p/how-i-passed-my-ccna-200-301-certification/ccna-logo.png" alt="Featured image of post How I passed my CCNA 200-301 Certification" />&lt;p>Hello guys,&lt;/p>
+&lt;p>I just passed my CCNA exam on the first attempt and wanted to show you what resources I used and how my experience can help prepare you for the exam.&lt;/p>
+&lt;h2 id="my-testcenter-exam-experience">My Testcenter Exam-Experience&lt;/h2>
+&lt;p>I took the exam in Frankfurt (Germany) at the same Pearson-Vue Testcenter where I did he compTia+ Certification.
+At the beginning I was a little nervous but that was away when the exam started. It was really tough because you always had to absorb alot of information and the time was ticking so you really need to hurry to finish the exam in time.&lt;/p>
+&lt;p>The first simulation part was lots of configurations and I decided to skip it because it would take me too long to finish it. This was the correct decision in the end because I just finished the exam with 2 minutes left.
+I could focus the rest of the exam and managed to pass it.&lt;/p>
+&lt;p>When I saw the screen with &amp;ldquo;Passed&amp;rdquo; after the Cisco survey, I was really happy and weight fell off from my shoulders.&lt;/p>
+&lt;h2 id="my-study-resources-and-exam-preaparation">My Study-Resources and Exam-Preaparation&lt;/h2>
+&lt;p>My employer Cisco had an internal training for the CCNA (of course).&lt;/p>
+&lt;p>Additionally I used the following resources:&lt;/p>
+&lt;ul>
+&lt;li>Read the Official CCNA Cert Guide Volume 1 &amp;amp; 2&lt;/li>
+&lt;li>Boson Ex-Sim&lt;/li>
+&lt;li>Watched &lt;a class="link" href="https://www.youtube.com/watch?v=H8W9oMNSuwo&amp;amp;list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ" target="_blank" rel="noopener"
+>Jeremy IT Labs YouTube-Videos&lt;/a> on difficult topics&lt;/li>
+&lt;li>Creating my own labs with EVE-NG&lt;/li>
+&lt;/ul>
+&lt;p>After reading the books, watching videos and doing labs I prepared one week before the exam with Boson Ex-SIM.
+The explanations in the Ex-Sim really helped me to remember the detailed info and concepts of important CCNA-topics.&lt;/p>
+&lt;h2 id="exam-tips">Exam-Tips&lt;/h2>
+&lt;p>Just quick exam-tips for the CCNA:&lt;/p>
+&lt;ul>
+&lt;li>Do not learn anything on the exam-day, it just makes you more insecure!&lt;/li>
+&lt;li>Make sure you know the following topics in-depth: OSPF, IPv4 Routing &amp;amp; WLAN&lt;/li>
+&lt;li>If the simulations take too long for you, just move on without finishing it (I only finished the second one to 80%)&lt;/li>
+&lt;li>You have to absorb alot of info every question. Read the question first and then search the required info.&lt;/li>
+&lt;li>There are experimental questions in the exam that will not get counted. Do net let you feel discouraged by these questions.&lt;/li>
+&lt;/ul>
+&lt;p>I hope this was useful for you and helps you for your CCNA-certification.&lt;/p>
+&lt;p>Reach out on my social-media accounts when you have any questions.&lt;/p>
+&lt;p>Thanks for reading,&lt;br>
+Christopher&lt;/p></description></item></channel></rss>
