@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Christopher Vierheller</title><link>https://packet-warrior.net/post/</link><description>Recent content in Posts on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://packet-warrior.net/post/index.xml" rel="self" type="application/rss+xml"/><item><title>How I passed my CCNA 200-301 Certification</title><link>https://packet-warrior.net/p/how-i-passed-my-ccna-200-301-certification/</link><pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-i-passed-my-ccna-200-301-certification/</guid><description>&lt;img src="https://packet-warrior.net/p/how-i-passed-my-ccna-200-301-certification/ccna-logo.png" alt="Featured image of post How I passed my CCNA 200-301 Certification" />&lt;p>Hello guys,&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Christopher Vierheller</title><link>https://packet-warrior.net/post/</link><description>Recent content in Posts on Christopher Vierheller</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 04 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://packet-warrior.net/post/index.xml" rel="self" type="application/rss+xml"/><item><title>EtherChannel Explained: Overview and Configuration</title><link>https://packet-warrior.net/p/etherchannel-explained-overview-and-configuration/</link><pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/etherchannel-explained-overview-and-configuration/</guid><description>&lt;img src="https://packet-warrior.net/p/etherchannel-explained-overview-and-configuration/network.png" alt="Featured image of post EtherChannel Explained: Overview and Configuration" />&lt;p>Hello people,&lt;/p>
+&lt;p>today I will explain you what EtherChannel exactly is and how you can configure it on your Cisco devices.&lt;/p>
+&lt;h2 id="what-is-etherchannel">What is EtherChannel?&lt;/h2>
+&lt;p>EtherChannel (also known as Link Aggregation or NIC Teaming) is a technology that enables the aggregation of multiple physical links into a single logical link. This is achieved by bundling together multiple Ethernet links and presenting them to the upper layer as a single high-bandwidth link.
+EtherChannel can be used to increase network bandwidth, improve network redundancy, and load balance traffic.&lt;/p>
+&lt;p>EtherChannel technology was first introduced by Cisco Systems in the early 1990s, and it has since been widely adopted by other networking vendors. It is supported on various network devices including switches, routers, and servers.&lt;/p>
+&lt;p>There are two widely used EtherChannel-Protocols nowadays. Cisco proprietary EtherChannel protocol PAgP and LACP is defined in IEEE. 802.3ad.
+&lt;img src="https://packet-warrior.net/p/etherchannel-explained-overview-and-configuration/Etherchannel_Image.jpg"
+width="1080"
+height="675"
+srcset="https://packet-warrior.net/p/etherchannel-explained-overview-and-configuration/Etherchannel_Image_hu627451599d9176b9ce59becc07376695_37092_480x0_resize_q75_box.jpg 480w, https://packet-warrior.net/p/etherchannel-explained-overview-and-configuration/Etherchannel_Image_hu627451599d9176b9ce59becc07376695_37092_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="EtherChannel"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>&lt;/p>
+&lt;h2 id="how-etherchannel-works">How EtherChannel Works&lt;/h2>
+&lt;p>EtherChannel works by bundling two or more Ethernet links together into a single logical link. This logical link appears to the upper layer as a single, high-bandwidth link. The physical links that make up the EtherChannel are called member links, and they must have the same speed and duplex settings.&lt;/p>
+&lt;p>There are two modes of EtherChannel: static and dynamic. In static mode, the network administrator manually configures the member links that will be bundled together into the EtherChannel. In dynamic mode, the network devices automatically negotiate the creation of the EtherChannel.&lt;/p>
+&lt;p>There are two protocols used for dynamic EtherChannel: Port Aggregation Protocol (&lt;strong>PAgP&lt;/strong>) and Link Aggregation Control Protocol (&lt;strong>LACP&lt;/strong>). PAgP is Cisco proprietary, while LACP is a standard protocol that is supported by multiple vendors. LACP is the recommended protocol to use for EtherChannel.&lt;/p>
+&lt;h2 id="benefits-of-etherchannel">Benefits of EtherChannel&lt;/h2>
+&lt;p>EtherChannel provides several benefits for your network-connections:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Increased bandwidth&lt;/strong>: By bundling multiple physical links, EtherChannel can provide a higher bandwidth.&lt;/li>
+&lt;li>&lt;strong>Improved redundancy&lt;/strong>: EtherChannel can provide redundancy in case of a link failure. If one member link fails, traffic is automatically redirected to the remaining links in the EtherChannel.&lt;/li>
+&lt;li>&lt;strong>Load balancing&lt;/strong>: EtherChannel can distribute traffic across the member links, which helps to balance the load and prevent bottlenecks.&lt;/li>
+&lt;li>&lt;strong>Simplified management&lt;/strong>: By bundling multiple physical links into a single logical link, network administrators can simplify the configuration and management of the network.&lt;/li>
+&lt;/ul>
+&lt;h2 id="etherchannel-configuration">EtherChannel Configuration&lt;/h2>
+&lt;p>The first step in configuring EtherChannel before configuring the correct protocol is to configure the same interface settings for each member link. This includes setting the speed and duplex settings, as well as any other relevant interface settings.&lt;/p>
+&lt;p>For example, to configure the interface settings for interfaces GigabitEthernet0/1-4 in order to create an &lt;strong>L2 Etherchannel Trunk&lt;/strong> on a Cisco Switch, use the following commands:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> interface range GigabitEthernet0/1-4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> switchport trunk encapsulation dot1q
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> switchport mode trunk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> switchport nonegotiate
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> speed 1000
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> duplex full
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Now we can continue with the etherchannel-protocol configuration using LACP or PAgP to create an aggregated port-channel. You have to decide first, which protocol you want to use and configure both connection ends with the same protocol.&lt;/p>
+&lt;h3 id="lacp-configuration">LACP Configuration&lt;/h3>
+&lt;p>&lt;strong>Step 1: Enable LACP&lt;/strong>&lt;/p>
+&lt;p>Now you need to enable LACP on each member link. LACP can be enabled using the channel-group command. For example, to enable LACP on interfaces GigabitEthernet0/1-4 and add it to channel group 1, use the following command:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> interface range GigabitEthernet0/1-4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> channel-group 1 mode active
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>The &amp;ldquo;mode active&amp;rdquo; command specifies that the interface should actively negotiate with other LACP-enabled interfaces to form an EtherChannel. Do the &amp;ldquo;mode active&amp;rdquo; command on both connection ends.&lt;/p>
+&lt;p>Now a virtual Port-Channel 1 is created who acts as single link.&lt;/p>
+&lt;p>&lt;a class="link" href="https://4.bp.blogspot.com/-wDwZtk44zLA/WSEXkqfoATI/AAAAAAAACwc/xVhjgZsQKawnjT2IcgIgFqkNhC7vPpWoQCLcB/s1600/pppp.png" target="_blank" rel="noopener"
+>Here is an overview&lt;/a> how you can configure the channel-group modes in order to configure your desired protocol.&lt;/p>
+&lt;p>&lt;strong>Step 2: Verify LACP Configuration&lt;/strong>&lt;/p>
+&lt;p>After configuring LACP on each member link, you should verify the configuration to ensure that LACP is working as expected. You can use the &amp;ldquo;show lacp neighbor&amp;rdquo; command to view information about the neighbor devices that are connected to each interface. For example, to view LACP information for interface GigabitEthernet0/1, use the following command:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> show lacp neighbor GigabitEthernet0/1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>This command displays information such as the neighbor device ID, the neighbor port ID, the current LACP mode, and the LACP state.&lt;/p>
+&lt;p>&lt;strong>Step 3: Verify EtherChannel LACP Configuration&lt;/strong>&lt;/p>
+&lt;p>After configuring the EtherChannel, you should verify the configuration to ensure that it is working as expected. You can use the &amp;ldquo;show etherchannel summary&amp;rdquo; command to view information about the EtherChannel configuration. For example, to view EtherChannel information for EtherChannel group 1, use the following command:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> show etherchannel summary | include Group 1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>This command displays information such as the EtherChannel protocol, the number of member links, the operational status, and the load balancing method.&lt;/p>
+&lt;h3 id="pagp-configuration">PAgP Configuration&lt;/h3>
+&lt;p>&lt;strong>Step 1: Enable PAgP&lt;/strong>&lt;/p>
+&lt;p>Now you need to enable PAgP on each member link. PAgP can be enabled using the channel-group command. For example, to enable PAgP on interface GigabitEthernet0/1 and add it to channel group 1, use the following command:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> interface range GigabitEthernet0/1-4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> channel-group 1 mode desirable
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>The &amp;ldquo;mode desirable&amp;rdquo; command specifies that the interface should actively negotiate with other PAgP-enabled interfaces to form an EtherChannel.&lt;/p>
+&lt;p>Configure the &amp;ldquo;mode desirable&amp;rdquo; on both connection ends or look at the mode-chart from the previous configuration to enable a working PAgP Etherchannel&lt;/p>
+&lt;p>&lt;strong>Step 2: Verify PAgP Configuration&lt;/strong>&lt;/p>
+&lt;p>After configuring PAgP on each member link, you should verify the configuration to ensure that PAgP is working as expected. You can use the &amp;ldquo;show PAgP neighbors&amp;rdquo; command to view information about the neighbor devices that are connected to each interface. For example, to view PAgP information for interface GigabitEthernet0/1, use the following command:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> show PAgP neighbors GigabitEthernet0/1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>This command displays information such as the neighbor device ID, the neighbor port ID, the current PAgP mode, and the PAgP state.&lt;/p>
+&lt;p>&lt;strong>Step 3: Verify EtherChannel PAgP Configuration&lt;/strong>&lt;/p>
+&lt;p>After configuring the EtherChannel PAgP, you should verify the configuration to ensure that it is working as expected. You can use the &amp;ldquo;show etherchannel summary&amp;rdquo; command to view information about the EtherChannel configuration. For example, to view EtherChannel information for EtherChannel group 1, use the following command:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl"> show etherchannel summary | include Group 1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>This command displays information such as the EtherChannel protocol, the number of member links, the operational status, and the load balancing method.&lt;/p>
+&lt;p>I hope this article was valuable for you and helps in your IT-Journey.&lt;/p>
+&lt;p>Reach out on my social-media accounts when you have any questions.&lt;/p>
+&lt;p>Thanks for reading,&lt;br>
+Christopher&lt;/p></description></item><item><title>How I passed my CCNA 200-301 Certification</title><link>https://packet-warrior.net/p/how-i-passed-my-ccna-200-301-certification/</link><pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate><guid>https://packet-warrior.net/p/how-i-passed-my-ccna-200-301-certification/</guid><description>&lt;img src="https://packet-warrior.net/p/how-i-passed-my-ccna-200-301-certification/ccna-logo.png" alt="Featured image of post How I passed my CCNA 200-301 Certification" />&lt;p>Hello guys,&lt;/p>
 &lt;p>I just passed my CCNA exam on the first attempt and wanted to show you what resources I used and how my experience can help prepare you for the exam.&lt;/p>
 &lt;h2 id="my-testcenter-exam-experience">My Testcenter Exam-Experience&lt;/h2>
 &lt;p>I took the exam in Frankfurt (Germany) at the same Pearson-Vue Testcenter where I did he compTia+ Certification.
