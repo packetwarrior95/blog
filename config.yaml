@@ -188,23 +188,12 @@ menu:
           params:
               icon: brand-github
 
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com/Packet_Warrior
-          params:
-              icon: brand-twitter
-
         - identifier: linkedin
           name: Linkedin
-          url: https://linkedin.com/in/vierheller-5407/
+          url: https://linkedin.com/in/cvierheller/
           params:
               icon: user 
 
-        - identifier: mail
-          name: Mail
-          url: mailto:christopher@packet-warrior.net
-          params:
-              icon: messages
 related:
     includeNewer: true
     threshold: 60
